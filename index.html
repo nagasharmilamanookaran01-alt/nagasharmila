@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nagasharmila | Networking Student Portfolio</title>
+  <meta name="description" content="Portfolio of Nagasharmila A/P Manookaran, Computer Science (Networking) student at UNIMAS seeking a six-month IT internship.">
+  <meta name="theme-color" content="#0b1020">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1020'/%3E%3Cpath d='M18 48V16h6l16 22V16h6v32h-6L24 26v22z' fill='%235eead4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="brand" aria-label="Nagasharmila, back to top">
+        <svg viewBox="0 0 64 64" width="34" height="34" role="img" aria-label="Monogram letter N">
+          <rect width="64" height="64" rx="14" class="brand-bg"/>
+          <path d="M18 48V16h6l16 22V16h6v32h-6L24 26v22z" class="brand-fg"/>
+        </svg>
+        <span>Naga</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" data-key="1">Home</a></li>
+        <li><a href="#highlights" data-key="2">Projects</a></li>
+        <li><a href="#about" data-key="3">About Me</a></li>
+        <li><a href="#contact" data-key="4">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+          <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span class="bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HOME ============ -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <canvas id="netCanvas" aria-hidden="true"></canvas>
+      <div class="container hero-inner">
+        <p class="eyebrow reveal">Hello, world <span class="blink" aria-hidden="true">_</span></p>
+        <h1 id="hero-title" class="reveal">I'm <span class="grad">Nagasharmila</span>.</h1>
+        <p class="typed-line reveal" aria-live="polite">
+          <span class="prompt" aria-hidden="true">&gt;</span>
+          <span id="typed" aria-label="Computer Science Networking Student">&nbsp;</span><span class="caret" aria-hidden="true"></span>
+        </p>
+        <p class="lead reveal">Third-year Networking student at UNIMAS looking for a six-month IT internship.</p>
+        <div class="cta reveal">
+          <a class="btn btn-primary" href="#highlights">See my highlights</a>
+          <a class="btn btn-ghost" href="#contact">Contact me</a>
+        </div>
+
+        <ul class="stats reveal" aria-label="Quick facts">
+          <li><strong data-count="3">0</strong><span>Languages</span></li>
+          <li><strong data-count="1" data-suffix="+ yr">0</strong><span>Industry experience</span></li>
+          <li><strong data-count="2028">0</strong><span>Graduating</span></li>
+        </ul>
+      </div>
+      <a href="#highlights" class="scroll-hint" aria-label="Scroll to highlights"><span></span></a>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="highlights" class="section" aria-labelledby="highlights-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">01 / Projects</p>
+          <h2 id="highlights-title">My <span class="grad">Highlights</span></h2>
+          <p class="muted">Five quick snapshots of who I am. Tap a card for a little more.</p>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Filter highlights">
+          <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-filter="study" aria-pressed="false">Study</button>
+          <button class="chip" type="button" data-filter="work" aria-pressed="false">Work</button>
+          <button class="chip" type="button" data-filter="skills" aria-pressed="false">Skills</button>
+        </div>
+        <p class="sr-only" id="filterStatus" role="status" aria-live="polite"></p>
+
+        <div class="grid" id="highlightGrid">
+
+          <article class="card tilt reveal" data-cat="study" data-modal="edu">
+            <span class="card-num" aria-hidden="true">01</span>
+            <h3>Education</h3>
+            <p>BSc Computer Science (Networking), UNIMAS. Expected graduation 2028.</p>
+            <button class="card-btn" type="button" data-open="edu" aria-label="More about Education">Learn more <span aria-hidden="true">&rarr;</span></button>
+          </article>
+
+          <article class="card tilt reveal" data-cat="work" data-modal="exp">
+            <span class="card-num" aria-hidden="true">02</span>
+            <h3>Experience</h3>
+            <p>POS Technician and Customer Support at KMS Autocount, 2022 to 2023.</p>
+            <button class="card-btn" type="button" data-open="exp" aria-label="More about Experience">Learn more <span aria-hidden="true">&rarr;</span></button>
+          </article>
+
+          <article class="card tilt reveal" data-cat="skills" data-modal="skills">
+            <span class="card-num" aria-hidden="true">03</span>
+            <h3>Technical Skills</h3>
+            <p>Networking, IT support, security basics, cloud basics and Java.</p>
+            <button class="card-btn" type="button" data-open="skills" aria-label="More about Technical Skills">Learn more <span aria-hidden="true">&rarr;</span></button>
+          </article>
+
+          <article class="card tilt reveal" data-cat="study work" data-modal="ach">
+            <span class="card-num" aria-hidden="true">04</span>
+            <h3>Achievements</h3>
+            <p>Best AI Proposal winner at an international competition.</p>
+            <button class="card-btn" type="button" data-open="ach" aria-label="More about Achievements">Learn more <span aria-hidden="true">&rarr;</span></button>
+          </article>
+
+          <article class="card tilt reveal" data-cat="skills" data-modal="lang">
+            <span class="card-num" aria-hidden="true">05</span>
+            <h3>Languages</h3>
+            <p>Tamil, English and Bahasa Malaysia.</p>
+            <button class="card-btn" type="button" data-open="lang" aria-label="More about Languages">Learn more <span aria-hidden="true">&rarr;</span></button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section alt" aria-labelledby="about-title">
+      <div class="container about">
+        <div class="about-text reveal">
+          <p class="eyebrow">02 / About Me</p>
+          <h2 id="about-title">A little <span class="grad">about me</span></h2>
+          <p>I'm a Computer Science student majoring in Networking at Universiti Malaysia Sarawak. Before university I worked in IT support, fixing POS systems, troubleshooting networks and training customers.</p>
+          <p>I enjoy solving technical problems and explaining them clearly. I'm now looking for a six-month internship in IT support, networking or system administration.</p>
+        </div>
+
+        <aside class="facts reveal" aria-label="Quick facts about me">
+          <dl>
+            <div><dt>Studying</dt><dd>BSc CS (Networking)</dd></div>
+            <div><dt>University</dt><dd>UNIMAS</dd></div>
+            <div><dt>Looking for</dt><dd>6-month internship</dd></div>
+            <div><dt>Location</dt><dd>Malaysia, open to relocate</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container contact">
+        <div class="contact-info reveal">
+          <p class="eyebrow">03 / Contact</p>
+          <h2 id="contact-title">Let's <span class="grad">connect</span></h2>
+          <p class="muted">Open to internship opportunities. Send me a message.</p>
+
+          <ul class="contact-list">
+            <li>
+              <span class="label">Email</span>
+              <a href="mailto:nagasharmilamanookaran01@gmail.com" id="emailLink">nagasharmilamanookaran01@gmail.com</a>
+              <button class="mini-btn" type="button" id="copyEmail">Copy</button>
+            </li>
+            <li>
+              <span class="label">Phone</span>
+              <a href="tel:+601037500109">+60 10-375 0109</a>
+            </li>
+            <li>
+              <span class="label">Local time</span>
+              <span id="clock" aria-live="off">--:--:--</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required minlength="2" aria-describedby="name-err">
+            <small class="err" id="name-err" role="alert"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err">
+            <small class="err" id="email-err" role="alert"></small>
+          </div>
+          <div class="field">
+            <label for="message">Message <span class="count" id="count" aria-hidden="true">0 / 300</span></label>
+            <textarea id="message" name="message" rows="4" maxlength="300" required minlength="10" aria-describedby="message-err"></textarea>
+            <small class="err" id="message-err" role="alert"></small>
+          </div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-in">
+      <p>&copy; <span id="year">2026</span> Nagasharmila A/P Manookaran</p>
+      <p class="muted small">Tip: press <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd> to jump between sections.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">&uarr;</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Details popup -->
+  <dialog class="modal" id="modal" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button class="icon-btn modal-close" type="button" id="modalClose" aria-label="Close details">&times;</button>
+      <h3 id="modalTitle"></h3>
+      <div id="modalBody"></div>
+    </div>
+  </dialog>
+
+  <noscript><p class="noscript">Please enable JavaScript to see the interactive features of this page.</p></noscript>
+  <script src="script.js"></script>
+</body>
+</html>
